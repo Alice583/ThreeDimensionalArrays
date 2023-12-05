@@ -4,23 +4,22 @@
 
 class ArrayThreeClass {
 private:
-//    int* arr;
     int size_x_;
     int size_y_;
     int size_z_;
     uint16_t* array_main_num_ ;
     uint16_t* array_additional_num_;
-    int pointerThree = 0;
-    int sizeThree;
+    int pointer_three_ = 0;
+    int size_three_;
 public:
     ArrayThreeClass(int sizeX, int sizeY, int sizeZ) : size_x_(sizeX), size_y_(sizeY), size_z_(sizeZ) {
         array_main_num_ = new uint16_t[sizeX * sizeY * sizeZ];
         array_additional_num_ = new uint16_t[(sizeX * sizeY * sizeZ - 1) / 16 + 1];
-        sizeThree = sizeX * sizeY * sizeZ;
-        for (int i = 0; i < sizeThree; ++i) {
+        size_three_ = sizeX * sizeY * sizeZ;
+        for (int i = 0; i < size_three_; ++i) {
             array_main_num_[i] = 0;
         }
-        for (int i = 0; i < (sizeThree - 1) / 16 + 1; ++i) {
+        for (int i = 0; i < (size_three_ - 1) / 16 + 1; ++i) {
             array_additional_num_[i] = 0;
         }
     }

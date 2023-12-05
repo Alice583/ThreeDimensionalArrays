@@ -7,14 +7,14 @@ private:
     int size_z_;
     uint16_t *array_main_num_;
     uint16_t *array_additional_num_;
-    int sizeTwo;
-    int pointerTwo;
+    int size_two_;
+    int pointer_two_;
 public:
     ArrayTwoClass(int sizeY, int sizeZ, uint16_t *mainDataPtr, uint16_t *supportArray, int size, int pointer) : size_y_(
-            sizeY), size_z_(sizeZ), array_main_num_(mainDataPtr), array_additional_num_(supportArray), sizeTwo(size),
-            pointerTwo(pointer) {
+            sizeY), size_z_(sizeZ), array_main_num_(mainDataPtr), array_additional_num_(supportArray), size_two_(size),
+                                                                                                                pointer_two_(pointer) {
             size_y_ = sizeY;
-            sizeTwo = size;
+        size_two_ = size;
         }
 
     ArrayOneClass operator[] (int j);

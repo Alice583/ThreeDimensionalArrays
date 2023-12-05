@@ -1,10 +1,6 @@
 #include <stdint.h>
 #include <iostream>
 
-//#ifndef LABWORK5_ALICE583_NUMBERCLASS_H
-//#define LABWORK5_ALICE583_NUMBERCLASS_H
-
-
 class NumberClass {
 private:
     uint16_t *array_main_num_;
@@ -25,6 +21,3 @@ public:
 
     friend std::istream& operator>>(std::istream& stream, NumberClass numberClass);
 };
-
-
-//#endif //LABWORK5_ALICE583_NUMBERCLASS_H

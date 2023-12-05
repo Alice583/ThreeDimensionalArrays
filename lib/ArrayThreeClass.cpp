@@ -2,10 +2,10 @@
 #include <iostream>
 
 ArrayTwoClass ArrayThreeClass::operator[](int i) {
-    int newSize = sizeThree / size_x_;
+    int newSize = size_three_ / size_x_;
     int newPointer = newSize * i;
     ArrayTwoClass arrayTwoClass(size_y_, size_z_, array_main_num_ + newPointer,
-                                array_additional_num_, newSize, pointerThree + newPointer);
+                                array_additional_num_, newSize, pointer_three_ + newPointer);
     return arrayTwoClass;
 }
 
@@ -43,39 +43,39 @@ void ArrayThreeClass::WriteNum(int val, int indexMain) {
     }
 }
 
-ArrayThreeClass operator+(const ArrayThreeClass &arrayThreeClass1, const ArrayThreeClass &arrayThreeClass2) {
+ArrayThreeClass operator+(const ArrayThreeClass& arrayThreeClass1, const ArrayThreeClass& arrayThreeClass2) {
     ArrayThreeClass result = ArrayThreeClass::MakeArray(arrayThreeClass1.size_x_, arrayThreeClass1.size_y_, arrayThreeClass1.size_z_);
-    for (int i = 0; i < arrayThreeClass1.sizeThree; ++i) {
+    for (int i = 0; i < arrayThreeClass1.size_three_; ++i) {
         result.WriteNum(arrayThreeClass1.GetNum(i) + arrayThreeClass2.GetNum(i), i);
     }
     return result;
 }
 
-ArrayThreeClass operator-(const ArrayThreeClass &arrayThreeClass1, const ArrayThreeClass &arrayThreeClass2) {
+ArrayThreeClass operator-(const ArrayThreeClass& arrayThreeClass1, const ArrayThreeClass& arrayThreeClass2) {
     ArrayThreeClass result = ArrayThreeClass::MakeArray(arrayThreeClass1.size_x_, arrayThreeClass1.size_y_, arrayThreeClass1.size_z_);
-    for (int i = 0; i < arrayThreeClass1.sizeThree; ++i) {
+    for (int i = 0; i < arrayThreeClass1.size_three_; ++i) {
         result.WriteNum(arrayThreeClass1.GetNum(i) - arrayThreeClass2.GetNum(i), i);
     }
     return result;
 }
 
-ArrayThreeClass operator*(int multiplier, const ArrayThreeClass &arrayThreeClass2) {
+ArrayThreeClass operator*(int multiplier, const ArrayThreeClass& arrayThreeClass2) {
     ArrayThreeClass result = ArrayThreeClass::MakeArray(arrayThreeClass2.size_x_, arrayThreeClass2.size_y_, arrayThreeClass2.size_z_);
-    for (int i = 0; i < arrayThreeClass2.sizeThree; ++i) {
+    for (int i = 0; i < arrayThreeClass2.size_three_; ++i) {
         result.WriteNum(multiplier * arrayThreeClass2.GetNum(i), i);
     }
     return result;
 }
 
-ArrayThreeClass operator*(const ArrayThreeClass &arrayThreeClass2, int multiplier) {
+ArrayThreeClass operator*(const ArrayThreeClass& arrayThreeClass2, int multiplier) {
     ArrayThreeClass result = ArrayThreeClass::MakeArray(arrayThreeClass2.size_x_, arrayThreeClass2.size_y_, arrayThreeClass2.size_z_);
-    for (int i = 0; i < arrayThreeClass2.sizeThree; ++i) {
+    for (int i = 0; i < arrayThreeClass2.size_three_; ++i) {
         result.WriteNum(arrayThreeClass2.GetNum(i) * multiplier, i);
     }
     return result;
 }
 
-std::ostream &operator<<(std::ostream &stream, const ArrayThreeClass &arrayThreeClass) {
+std::ostream &operator<<(std::ostream& stream, const ArrayThreeClass& arrayThreeClass) {
     int indexNumArray = 0;
     stream << '[';
     stream << '\n';

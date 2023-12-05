@@ -32,7 +32,7 @@ void NumberClass::SetValue(int value){
 }
 
 
-std::istream &operator>>(std::istream& stream, NumberClass numberClass) {
+std::istream& operator>>(std::istream& stream, NumberClass numberClass) {
     int buf;
     stream >> buf;
     numberClass.SetValue(buf);
