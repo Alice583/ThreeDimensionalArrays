@@ -15,7 +15,7 @@ NumberClass::operator int() const {
     return result;
 }
 
-void NumberClass::SetValue(int value) const{
+void NumberClass::SetValue(int value){
     *array_main_num_ = 0;
     int num = value;
     bool support_num;
@@ -32,7 +32,7 @@ void NumberClass::SetValue(int value) const{
 }
 
 
-std::istream &operator>>(std::istream& stream, const NumberClass& numberClass) {
+std::istream &operator>>(std::istream& stream, NumberClass numberClass) {
     int buf;
     stream >> buf;
     numberClass.SetValue(buf);

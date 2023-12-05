@@ -21,9 +21,9 @@ public:
 
     operator int() const;
 
-    void SetValue(int value) const;
+    void SetValue(int value);
 
-    friend std::istream& operator>>(std::istream& stream, const NumberClass& numberClass);
+    friend std::istream& operator>>(std::istream& stream, NumberClass numberClass);
 };
 
 
