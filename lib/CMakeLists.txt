@@ -1,0 +1,9 @@
+add_library(3d_array
+        ArrayOneClass.cpp
+        ArrayOneClass.h
+        ArrayTwoClass.cpp
+        ArrayTwoClass.h
+        ArrayThreeClass.cpp
+        ArrayThreeClass.h
+        NumberClass.h
+        NumberClass.cpp)
